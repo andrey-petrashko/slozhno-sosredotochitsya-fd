@@ -1,5 +1,164 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+:root {
+  font-family: 'IBM Plex mono', monospace;
+}
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+overflow-x: hidden;
+}
+
+.header {
+  display: grid;
+  margin: 0;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-items: end;
+  align-items: center;
+  position: relative;
+  block-size: calc(100vh - 15px);
+  min-block-size: 668px;
+  padding: 0 10px 0 10px;
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+
+.header__theme-menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 18px;
+  text-transform: lowercase;
+  color: var(--accent-color);
+  border: none;
+  inline-size: 110px;
+  block-size: 30px;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--accent-color-opcaity) ;
+}
+
+.header__rec-element {
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 35px;
+}
+
+.header__rec-element::before {
+  content: 'REC';
+  color: var(--accent-color);
+}
+
+.header__rec-element::after {
+  content: '';
+  margin-inline-start:40px;
+  display: inline-block;
+  inline-size: 10px;
+  block-size: 10px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  inset-inline-end: 10px;
+  inset-block-start: 10px;
+}
+
+.decorated-zone::after {
+  content: '';
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  inset-inline-start: 10px;
+  inset-block-end: 10px;
+  position: absolute;
+}
+
+.headline {
+  display: flex;
+  font-size: var(--font-size_header-footer);
+  font-weight: bold;
+  color: var(--headline-color);
+  line-height: 82.5%;
+  margin: 0;
+  padding: 0;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  justify-self: start;
+}
+
+.header__text-container {
+  display: flex;
+  block-size: auto;
+  inline-size: var(--header-text-cont-inline-size);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header__text {
+  margin: 0;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--decor-text-color);
+  font-weight: bold;
+}
+
+.section-title {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.card_text {
+  color: var(--main-text-color);
+}
+
+.reg_font {
+  font-weight: normal;
+}
+
+
+
+.gallery {
+display: grid;
+gap: 15px;
+
+/* grid-template-rows: repeat(6, min-content); */
+}
+
+.gallery__item {
+display: block;
+inline-size: 100%;
+
+}
+
+
+.footer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  block-size: calc(100vh - 8px); 
+  min-block-size: 668px;
+
 }
