@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 :root {
   font-family: 'IBM Plex mono', monospace;
-
+  font-size: 18px;
 }
 
 .page {
@@ -10,6 +10,7 @@
   padding: 0;
   background-color: var(--bckg-color, #000028);
   overflow-x: hidden;
+
 }
 
 .header {
@@ -118,7 +119,6 @@ padding-block-start: 5px;
   block-size: 117px;
 margin-block-end: 10px;
   margin-inline-end: 10px;
-  font-size: 18px;
   font-weight: bold;
 }
 
@@ -130,11 +130,19 @@ margin-block-end: 10px;
   background-color: var(--accent-color);
   color: var(--decor-text-color);
   font-weight: bold;
+  margin-block-end: 0;
+}
+
+.section {
+  margin-inline: 10px;
 }
 
 .section-title {
-  color: var(--accent-color);
+  color: var(--section-title-color);
+
   font-weight: bold;
+  margin-block-start: 40px;
+  margin-block-end: 0;
 }
 
 .card_text {
@@ -149,13 +157,15 @@ margin-block-end: 10px;
 
 .gallery {
 display: grid;
-gap: 15px;
+gap: 10px;
+padding-block-end: 0;
 
 /* grid-template-rows: repeat(6, min-content); */
 }
 
 .gallery__item {
 display: block;
+
 inline-size: 100%;
 
 }

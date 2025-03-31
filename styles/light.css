@@ -5,6 +5,9 @@
 */
 
 @media (prefers-color-scheme: light) {
+  .page {
+    background-color: #fff1f7;
+  }
   .header {
     --header-bckg-img: url("../images/cover-image-light.png") ;
   }
@@ -15,7 +18,11 @@
 
 
 :root.theme-light {
-  background-color: #4f0;
+  --accent-color: #ff8dcb;
+  --main-text-color: #353430;
+  --decor-text-color: #353430;
+  --section-title-color: #353430;
+  --headline-color: #ffc2e6;
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
@@ -24,7 +31,7 @@
 
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
-
+  background-color: #fff1f7;
 }
 
 .theme-light .header {
