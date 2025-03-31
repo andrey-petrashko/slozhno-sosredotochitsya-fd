@@ -3,6 +3,11 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+@media (prefers-color-scheme: dark) {
+  .header {
+    --header-bckg-img: url("../images/cover-image-dark.png") ;
+  }
+}
 
 :root.theme-dark {
   /* сохраните этот селектор в приведённом виде.
