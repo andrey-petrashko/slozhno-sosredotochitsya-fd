@@ -3,12 +3,13 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+.theme-auto {
 @media (prefers-color-scheme: dark) {
   .header {
     --header-bckg-img: url("../images/cover-image-dark.png") ;
   }
 }
-
+}
 :root.theme-dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,

@@ -11,10 +11,11 @@
 --section-title-color: #ff0070;
 --main-background-color: 1;
 --columns: 1;
---columns-size: 100%;
+--columns-size: 100vw;
 --headline-color: #DB00FF;
 --header-text-cont-inline-size: 355px;
 --decor-text-color: #000028;
 --header-bckg-img: url("../images/cover-image-dark.png") ;
 --bckg-color: #000028;
 }
+
