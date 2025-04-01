@@ -1,15 +1,14 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-:root {
-  font-family: 'IBM Plex mono', monospace;
-}
-
 .page {
   position: relative;
   background-color: var(--bckg-color, #000028);
-  background-image: var(--header-bckg-img);
+  background-image: var(--bg-img, url("../images/cover-image-dark.png"));
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: var(--page__row-gap, 40px);
 }
 
 .header {
@@ -20,33 +19,30 @@
   position: relative;
   min-block-size: 668px;
   block-size: 100vh;
-  padding: 0 10px;
-  
+  padding-inline: 10px;
 }
 
 .header__rec-element {
   position: absolute;
-  display: inline;
   inset-block-start: 11px;
   inset-inline-end: 18px;
 }
 
 .header__rec-element::before {
-  display: inline-block;
   content: 'REC';
-  color: var(--accent-color);
+  color: var(--accent-color, #ff0070);
   line-height: 25px;
   padding-inline-end: 11px;
-
 }
+
 .header__rec-element::after {
   display: inline-block;
   content: '';
   inline-size: 10px;
   block-size: 10px;
   border-radius: 50%;
-  background-color: var(--accent-color);
-  box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--accent-color, #ff0070);
+  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
 }
 
 .decorated-zone::before {
@@ -54,8 +50,8 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color, #ff0070);
+  border-block-start: 1px solid var(--accent-color, #ff0070);
   inset-inline-end: 10px;
   inset-block-start: 10px;
 }
@@ -63,26 +59,24 @@
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  margin: 0;
   padding-block-start: 5px;
-  list-style: none;
   gap: 10px;
 }
 
 .header__theme-menu-button {
   background-color: transparent;
-  font-size: 18px;
+  font-size: var(--font-size-main, 18px);
   font-weight: normal;
   line-height: 18px;
   text-transform: lowercase;
-  color: var(--accent-color);
+  color: var(--accent-color, #ff0070);
   border: none;
   inline-size: 70px;
   block-size: 26px;
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--accent-color-opcaity) ;
+  outline: 1px solid var(--accent-color-opcaity, #ff007066) ;
 }
 
 .decorated-zone::after {
@@ -90,81 +84,90 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color, #ff0070);
+  border-block-end: 1px solid var(--accent-color, #ff0070);
   inset-inline-start: 10px;
   inset-block-end: 10px;
 }
 
 .headline {
-  display: block;
-  margin: 0;
-  font-family: 'IBM Plex mono', monospace;
-  font-size: var(--font-size_header-footer);
+  font-size: var(--font-size_header-footer, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
   font-weight: bold;
-  color: var(--headline-color);
+  color: var(--headline-color, #DB00FF);
   line-height: 82.5%;
-  text-shadow: 4px 4px 0 var(--accent-color);
-
+  text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
 }
 
 .header__text-container {
   display: grid;
   grid-template-columns: minmax(355px, 364px) ;
-  grid-template-rows: 117px;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 23.4px;
   margin-block-end: 10px;
 }
 
 .header__text {
-  margin: 0;
+  font-size: var(--font-size-main, 18px);
+  font-weight: bold;
 }
 
 .title-decor {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #ff0070);
   color: var(--decor-text-color);
-  font-weight: bold;
+}
+/*-----------------------------------------main----------------------------------------*/
+.main {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content;
+  gap: 50px;
 }
 
 .section {
-  margin-inline: 10px;
+  padding-inline: 10px;
 }
 
 .section-title {
-  color: var(--section-title-color);
-
+  font-size: var(--font-size-main, 18px);
+  color: var(--section-title-color, #ff0070);  /* ????? */
   font-weight: bold;
-  margin-block-start: 40px;
-  margin-block-end: 0;
+  padding-block-end: 20px;
+}
+
+.card_title {
+  font-size: var(--font-size-main, 18px);
+  margin-block-end: 10px;
+}
+
+.card-article:not(:last-child) {
+  padding-block-end: 20px;
 }
 
 .card_text {
-  color: var(--main-text-color);
+  font-size: var(--font-size-main, 18px);
+  color: var(--main-text-color, #f1b2ce);
 }
 
-.reg_font {
+.special-card-title {
+  font-size: var(--font-size-main, 18px);
   font-weight: normal;
+  margin-block-start: 20px;
+  margin-block-end: 10px;
 }
 
-
+.gallery-title {
+  font-size: var(--font-size-main, 18px);
+}
 
 .gallery {
-display: grid;
-gap: 10px;
-padding-block-end: 0;
-
-/* grid-template-rows: repeat(6, min-content); */
+  display: grid;
+  gap: 10px;
 }
 
 .gallery__item {
-display: block;
-
-inline-size: 100%;
-
+  display: block;
+  inline-size: 100%;
 }
 
+/*---------------------------------------------footer-----------------------------------*/
 
 .footer {
   display: grid;
@@ -176,9 +179,8 @@ inline-size: 100%;
 }
 
 .footer-headline {
-  display: flex;
-  font-size: var(--font-size_header-footer);
+  font-size: var(--font-size_header-footer, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
   font-weight: bold;
-  color: var(--headline-color);
-  text-shadow: 2px 2px 0 var(--accent-color);
+  color: var(--headline-color, #DB00FF);
+  text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
 }

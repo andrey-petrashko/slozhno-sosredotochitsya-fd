@@ -6,7 +6,7 @@
 .theme-auto {
 @media (prefers-color-scheme: dark) {
   .header {
-    --header-bckg-img: url("../images/cover-image-dark.png") ;
+    --bg-img: url("../images/cover-image-dark.png") ;
   }
 }
 }
