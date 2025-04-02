@@ -19,7 +19,7 @@
   position: relative;
   min-block-size: 668px;
   block-size: 100vh;
-  padding-inline: 10px;
+  padding-inline: var(--padding-inline, 10px);
 }
 
 .header__rec-element {
@@ -52,8 +52,8 @@
   block-size: 25px;
   border-inline-end: 1px solid var(--accent-color, #ff0070);
   border-block-start: 1px solid var(--accent-color, #ff0070);
-  inset-inline-end: 10px;
-  inset-block-start: 10px;
+  inset-inline-end: var(--padding-inline, 10px);
+  inset-block-start: var(--padding-inline, 10px);
 }
 
 .header__theme-menu-list {
@@ -86,11 +86,12 @@
   block-size: 25px;
   border-inline-start: 1px solid var(--accent-color, #ff0070);
   border-block-end: 1px solid var(--accent-color, #ff0070);
-  inset-inline-start: 10px;
-  inset-block-end: 10px;
+  inset-inline-start: var(--padding-inline, 10px);
+  inset-block-end: var(--padding-inline, 10px);
 }
 
 .headline {
+  justify-self: start;
   font-size: var(--font-size_header-footer, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
   font-weight: bold;
   color: var(--headline-color, #DB00FF);
@@ -100,7 +101,7 @@
 
 .header__text-container {
   display: grid;
-  grid-template-columns: minmax(355px, 364px) ;
+  grid-template-columns: minmax(355px, 364px);
   margin-block-end: 10px;
 }
 
@@ -122,50 +123,56 @@
 }
 
 .section {
-  padding-inline: 10px;
+  padding-inline: var(--padding-inline, 10px);
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 20px;
 }
 
 .section-title {
   font-size: var(--font-size-main, 18px);
   color: var(--section-title-color, #ff0070);  /* ????? */
   font-weight: bold;
-  padding-block-end: 20px;
 }
 
 .card_title {
   font-size: var(--font-size-main, 18px);
-  margin-block-end: 10px;
-}
 
-.card-article:not(:last-child) {
-  padding-block-end: 20px;
 }
 
 .card_text {
   font-size: var(--font-size-main, 18px);
   color: var(--main-text-color, #f1b2ce);
+  padding-block-start: 10px ;
 }
 
-.special-card-title {
+.section_how_concentrate {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.section_how_concentrate .card-article .title-decor {
   font-size: var(--font-size-main, 18px);
   font-weight: normal;
-  margin-block-start: 20px;
-  margin-block-end: 10px;
+}
+
+.gallery {
+display: grid;
+gap: 10px;
 }
 
 .gallery-title {
   font-size: var(--font-size-main, 18px);
 }
 
-.gallery {
-  display: grid;
-  gap: 10px;
+.gallery__item {
+  margin: 0;
+  inline-size: 100%;
+  padding: 0;
+  
 }
 
-.gallery__item {
-  display: block;
-  inline-size: 100%;
-}
 
 /*---------------------------------------------footer-----------------------------------*/
 

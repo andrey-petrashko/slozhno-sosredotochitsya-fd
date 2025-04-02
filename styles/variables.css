@@ -19,5 +19,6 @@
 --bg-img: url("../images/cover-image-dark.png") ;
 --bckg-color: #000028;
 --page__row-gap: 40px;
+--padding-inline: 10px;
 }
 

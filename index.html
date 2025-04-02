@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark light">
-    <link rel="icon" href="./images/favicon.ico" sizes="any">
-    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="./styles/globals.css">
     <link rel="stylesheet" href="./styles/variables.css">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" media="(768px <= width < 1024px)" href="./styles/medium_scr.css">
+    <link rel="stylesheet" media="(1024px <= width)" href="./styles/large_scr.css">
     <link rel="stylesheet" href="./styles/dark.css">
     <link rel="stylesheet" href="./styles/light.css">
+    <link rel="icon" href="./images/favicon.ico" sizes="any">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
     <title>Сложно сосредоточиться</title>
     <script src="./scripts/script.js"></script>
   </head>
@@ -47,8 +49,8 @@
         </ul>
       </nav>
         <h1 class="headline">no focus</h1>
-        <div class="header__text-container title-decor">
-          <p class="header__text">
+        <div class="header__text-container ">
+          <p class="header__text title-decor">
             Что делать, когда не можешь делать ничего <br>Или почему нам так сложно сконцентрироваться, особенно когда очень надо
           </p>
         </div>      
@@ -56,7 +58,7 @@
 <!--------------------------------------------------- ОСНОВНОЙ РАЗДЕЛ ------------------------------------------------------->
     <main class="main">
 
-      <section class="section">
+      <section class="section section_why-difficult">
         <h2 class="section-title">Почему сосредоточиться так сложно</h2>
 
         <article class="card-article">
@@ -89,7 +91,7 @@
         </article>
       </section>   
 
-      <section class="section">
+      <section class="section section_what_degradate">
         <h2 class="section-title">Что снижает концентрацию внимания?</h2>
         
         <article class="card-article">
@@ -130,13 +132,13 @@
         </article>
       </section>  
           
-      <section class="section">
+      <section class="section section_how_concentrate">
         <h2 class="section-title">Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)</h2>
 
         <h3 class="card_title title-decor">5 простых (на самом деле не очень) советов</h3>
    
-        <article class="article-how_concentrate">
-          <h4 class="title-decor special-card-title">Представьте небо и облака</h4>
+        <article class="card-article">
+          <h4 class="card-title title-decor">Представьте небо и облака</h4>
           <div class="card_text_container">
             <p class="card_text">Или листья в ручье. Тут дело в лёгкой медитации, которая помогает 
             успокоиться. Ведь часто именно тревожные мысли о сложных задачах как раз и 
@@ -149,8 +151,8 @@
           </div>
         </article>
 
-        <article class="article-how_concentrate">
-          <h4 class="title-decor special-card-title">Включите музыку</h4>
+        <article class="card-article">
+          <h4 class="title-decor card-title">Включите музыку</h4>
           <div class="card_text_container">
             <p class="card_text">Но не любую, и не любимую. Любимая может быть связана с сильными 
             положительными эмоциями, которые тоже очень сильно отвлекают. Подойдёт тихая, 
@@ -160,8 +162,8 @@
           </div>
         </article>
 
-        <article class="article-how_concentrate">
-          <h4 class="title-decor special-card-title">Прогуляйтесь</h4>
+        <article class="card-article">
+          <h4 class="title-decor card-title">Прогуляйтесь</h4>
           <div class="card_text_container">
             <p class="card_text">Или даже пробегитесь. Лучше найти парк или лес: один эксперимент показал, 
             что созерцание природы повышает концентрацию, в то время как после просмотра 
@@ -172,8 +174,8 @@
           </div>
         </article>
 
-        <article class="article-how_concentrate">
-          <h4 class="title-decor special-card-title">Хорошо ешьте</h4>
+        <article class="card-article">
+          <h4 class="title-decor card-title">Хорошо ешьте</h4>
           <div class="card_text_container">
             <p class="card_text">Мы — не ваша бабушка, но это правда важно. Выбирайте продукты, которые 
             препятствуют резким скачкам сахара в крови. Например, с высоким содержанием 
@@ -183,8 +185,8 @@
           </div>
         </article>
 
-        <article class="article-how_concentrate">
-          <h4 class="title-decor special-card-title">Читайте</h4>
+        <article class="card-article">
+          <h4 class="title-decor card-title">Читайте</h4>
           <div class="card_text_container">
             <p class="card_text">Настоящие бумажные книги. Это правда помогает с концентрацией: чтобы прочитать 
             пост в соцсети, достаточно нескольких минут или даже секунд. А вот интересная 
@@ -196,32 +198,38 @@
       </section>
 
       <section class="section gallery">
-       <h3 class="gallery-title title-decor">А можно в картинках?</h3>
+        <h3 class="gallery-title title-decor">А можно в картинках?</h3>
+
         <img class="gallery__item"
-          src="./images/sunset.png" 
-          alt=""
+          src="./images/sunset.png"
+          alt="sunset"
           loading="lazy"
-        >
+        />
+
         <img class="gallery__item"
           src="./images/ice-cream.png"
+          alt="ice-cream"
+          loading="lazy"
+        />
+
+        <img class="gallery__item" 
+          src="./images/tape.png"
+          alt="tape"
+          loading="lazy"
+        />
+
+        <img class="gallery__item"
+          src="./images/books.png"
           alt="" 
           loading="lazy"
-        >
-        <img class="gallery__item" 
-          src="./images/tape.png" 
-          alt="" 
-          loading="lazy"  
-        >        
-        <img class="gallery__item" 
-          src="./images/books.png"  
-          alt="" 
-          loading="lazy"
-        >          
-        <img class="gallery__item" 
-          src="./images/street.png"  
+        />
+
+        <img class="gallery__item"
+          src="./images/street.png"
           alt=""
           loading="lazy"
-        >           
+        />
+
       </section> 
     </main>
 
