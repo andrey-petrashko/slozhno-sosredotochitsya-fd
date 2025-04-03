@@ -1,55 +1,33 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
-.theme-auto .header__theme-menu-button_type_auto {
-  border: 1px solid green;
-}
-
-.theme-auto {
-
-@media (prefers-color-scheme: light) {
-  .page {
-    background-color: #fff1f7;
-    --bg-img: url("../images/cover-image-light.png") ;
-  }
-  .header {
-
-  }
-  .header__rec-element {
-    display: none;
-  }
-}
-}
-
 :root.theme-light {
   --accent-color: #ff8dcb;
   --main-text-color: #353430;
   --decor-text-color: #353430;
   --section-title-color: #353430;
   --headline-color: #ffc2e6;
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
-}
-
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-  background-color: #fff1f7;
-  --bg-img: url("../images/cover-image-light.png") ;
-}
-
-.theme-light .header {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-
-}
-
+  --accent-color-opcaity: #ff8dcb66;
+  --bg-img: url("../images/cover-image-light.png");
+  --bckg-color: #fff1f7;
+  }
+  
 .theme-light .header__rec-element {
   display: none;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+  --accent-color: #ff8dcb;
+  --main-text-color: #353430;
+  --decor-text-color: #353430;
+  --section-title-color: #353430;
+  --headline-color: #ffc2e6;
+  --accent-color-opcaity: #ff8dcb66;
+  --bg-img: url("../images/cover-image-light.png");
+  --bckg-color: #fff1f7;
+  }
+  
+  .header__rec-element {
+    display: none;
+  }
 
+}
 

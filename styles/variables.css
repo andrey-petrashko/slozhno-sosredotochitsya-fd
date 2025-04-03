@@ -10,15 +10,11 @@
 --accent-color: #ff0070;
 --accent-color-opcaity: #ff007066;
 --section-title-color: #ff0070;
---main-background-color: 1;
---columns: 1;
---columns-size: 100vw;
 --headline-color: #DB00FF;
---header-text-cont-inline-size: 355px;
 --decor-text-color: #000028;
 --bg-img: url("../images/cover-image-dark.png") ;
 --bckg-color: #000028;
 --page__row-gap: 40px;
---padding-inline: 10px;
+--ofst: 10px;
 }
 

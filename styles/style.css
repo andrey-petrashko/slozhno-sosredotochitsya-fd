@@ -1,6 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
-  position: relative;
   background-color: var(--bckg-color, #000028);
   background-image: var(--bg-img, url("../images/cover-image-dark.png"));
   background-position: center;
@@ -19,7 +18,7 @@
   position: relative;
   min-block-size: 668px;
   block-size: 100vh;
-  padding-inline: var(--padding-inline, 10px);
+  padding-inline: var(--ofst, 10px);
 }
 
 .header__rec-element {
@@ -52,8 +51,8 @@
   block-size: 25px;
   border-inline-end: 1px solid var(--accent-color, #ff0070);
   border-block-start: 1px solid var(--accent-color, #ff0070);
-  inset-inline-end: var(--padding-inline, 10px);
-  inset-block-start: var(--padding-inline, 10px);
+  inset-inline-end: var(--ofst, 10px);
+  inset-block-start: var(--ofst, 10px);
 }
 
 .header__theme-menu-list {
@@ -75,8 +74,18 @@
   block-size: 26px;
 }
 
-.header .header__theme-menu-button:hover {
+.header__theme-menu-button:hover {
   border: 1px solid var(--accent-color-opcaity, #ff007066) ; 
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+
+  border-bottom: 1px solid var(--accent-color, #ff007066) ; 
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color, #ff007066) ; 
 }
 
 .decorated-zone::after {
@@ -86,8 +95,8 @@
   block-size: 25px;
   border-inline-start: 1px solid var(--accent-color, #ff0070);
   border-block-end: 1px solid var(--accent-color, #ff0070);
-  inset-inline-start: var(--padding-inline, 10px);
-  inset-block-end: var(--padding-inline, 10px);
+  inset-inline-start: var(--ofst, 10px);
+  inset-block-end: var(--ofst, 10px);
 }
 
 .headline {
@@ -102,7 +111,7 @@
 .header__text-container {
   display: grid;
   grid-template-columns: minmax(355px, 364px);
-  margin-block-end: 10px;
+  margin-block-end: var(--ofst, 10px);
 }
 
 .header__text {
@@ -136,7 +145,7 @@
 }
 
 .section {
-  padding-inline: var(--padding-inline, 10px);
+  padding-inline: var(--ofst, 10px);
   display: grid;
   grid-template-columns: 100%;
   gap: 20px;
@@ -144,7 +153,7 @@
 
 .section-title {
   font-size: var(--font-size-main, 18px);
-  color: var(--section-title-color, #ff0070);  /* ????? */
+  color: var(--section-title-color, #ff0070);
   font-weight: bold;
 }
 
@@ -169,6 +178,21 @@
   font-weight: normal;
 }
 
+.gallery {
+  display: grid;
+  gap: 10px;
+}
+  
+.gallery-title {
+  font-size: var(--font-size-main, 18px);
+}
+  
+.gallery__item {
+  margin: 0;
+  inline-size: 100%;
+  padding: 0;
+}
+
 /*---------------------------------------------footer-----------------------------------*/
 
 .footer {
@@ -185,4 +209,179 @@
   font-weight: bold;
   color: var(--headline-color, #DB00FF);
   text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page__row-gap:60px;
+    --ofst: 20px;
+    --font-size_header-footer: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header {
+      padding-inline: 0;
+  }
+
+  .header__rec-element {
+      inset-block-start: 21px;
+      inset-inline-end: 28px;
+  }
+
+  .header__theme-menu-list {
+  padding-block-start: 15px;
+  padding-inline-end: var(--ofst, 20px);
+  }
+
+  .headline {
+    font-size: var(--font-size_header-footer, clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem));
+  }
+
+  .header__text-container {
+      padding-inline-start: var(--ofst, 20px);
+      grid-template-columns: 1fr 1fr;
+      margin-block-end: var(--ofst, 20px);
+      margin-inline-end: var(--ofst, 20px);
+  }
+
+  .header__text {
+      grid-column: 2;
+  }
+
+  .section_why-difficult {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: min-content min-content;
+      gap: 20px;
+  }
+
+  .main {
+    gap: 80px;
+  }
+
+  .section_why-difficult .card-article {
+      grid-column: 2;
+  }
+
+  .section_what_degradate {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: min-content;
+  }
+
+  .section_what_degradate .section-title {
+    grid-column: 1;
+  }
+
+  .section_what_degradate .card-article {
+    grid-column: 1 / -1;
+  }
+
+  .section_how_concentrate {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: min-content min-content;
+    gap: 20px;
+  }
+
+  .section_how_concentrate .section-title {
+    grid-column: 1;
+    grid-row: 1 / -1;
+  }
+
+  .section_how_concentrate .card_title {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .section_how_concentrate .card-article {
+    grid-column: 2;
+  }
+
+  .gallery {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: min-content 192px 230px 318px;
+      grid-auto-flow: dense;
+      gap: 20px;
+  }
+
+  .gallery__item {
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;    
+  }
+
+  .gallery-title {
+      grid-column: span 3;
+      grid-row: 1;
+  }
+
+  .gallery__item:nth-child(2) {
+      grid-column: 1 / -2;
+      grid-row: 2 / 2;
+  }
+
+  .gallery__item:nth-child(3) {
+      grid-column: 3 / 3;
+      grid-row: 2 / span 2;
+  }
+
+  .gallery__item:nth-child(4) {
+      grid-column: 1 / 1;
+      grid-row: 3 / span 2;
+  }
+  
+  .gallery__item:nth-child(6) {
+      grid-column: 2 / span 2;
+      grid-row: 4 / 4;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --font-size_header-footer: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --ofst: 20px;
+  }
+
+  .header__theme-menu {
+      justify-self: center;
+      align-self: start;
+  }
+
+  .header__theme-menu-list {
+    padding-block-start: var(--ofst, 20px);
+    padding-inline: 0;
+      flex-direction: row;
+  }
+
+  .headline {
+      font-size: var(--font-size_header-footer, clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem));
+  }
+
+  .section_why-difficult {
+    column-gap: 10px;
+  }
+
+  .section_what_degradate {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content;
+  }
+
+  .section_what_degradate .section-title {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .section_what_degradate .card-article {
+    grid-row: 2;
+    grid-column: auto;
+  }
+
+  .section_how_concentrate {
+    column-gap: 10px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content 260px 315px 433px;
+    grid-auto-flow: dense;
+  }
 }
