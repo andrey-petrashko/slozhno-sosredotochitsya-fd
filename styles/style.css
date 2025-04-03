@@ -75,17 +75,17 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--accent-color-opcaity, #ff007066) ; 
+  border: 1px solid var(--accent-color-opcaity, #ff007066);
 }
 
 .header__theme-menu-button:focus-visible {
   outline: none;
 
-  border-bottom: 1px solid var(--accent-color, #ff007066) ; 
+  border-bottom: 1px solid var(--accent-color, #ff007066);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color, #ff007066) ; 
+  border: 1px solid var(--accent-color, #ff007066);
 }
 
 .decorated-zone::after {
@@ -306,7 +306,7 @@
   .gallery__item {
       inline-size: 100%;
       block-size: 100%;
-      object-fit: cover;    
+      object-fit: cover;
   }
 
   .gallery-title {
