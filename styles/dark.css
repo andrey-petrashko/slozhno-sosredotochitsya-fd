@@ -12,22 +12,6 @@
   display: block;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --main-text-color: #f1b2ce;
-    --accent-color: #ff0070;
-    --accent-color-opcaity: #ff007066;
-    --section-title-color: #ff0070;
-    --headline-color: #DB00FF;
-    --decor-text-color: #000028;
-    --bg-img: url("../images/cover-image-dark.png") ;
-    --bckg-color: #000028;
-  }
-  
-  .theme-dark .header__rec-element {
-    display: block;
-  }
-}
 
 
 
