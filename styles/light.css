@@ -3,7 +3,13 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+
+.theme-auto .header__theme-menu-button_type_auto {
+  border: 1px solid green;
+}
+
 .theme-auto {
+
 @media (prefers-color-scheme: light) {
   .page {
     background-color: #fff1f7;

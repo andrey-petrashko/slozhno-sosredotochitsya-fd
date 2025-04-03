@@ -75,8 +75,8 @@
   block-size: 26px;
 }
 
-.header__theme-menu-button:hover {
-  outline: 1px solid var(--accent-color-opcaity, #ff007066) ;
+.header .header__theme-menu-button:hover {
+  border: 1px solid var(--accent-color-opcaity, #ff007066) ; 
 }
 
 .decorated-zone::after {
@@ -122,6 +122,19 @@
   gap: 50px;
 }
 
+.text-lnk {
+  text-decoration: none;
+  text-shadow: 2px 2px 0px var(--accent-color, #ff0070);
+}
+
+.text-lnk:hover {
+  border-bottom: 1px solid var(--main-text-color, #f1b2ce);
+}
+
+.text-lnk:focus {
+  outline: 1px solid var(--main-text-color, #f1b2ce);
+}
+
 .section {
   padding-inline: var(--padding-inline, 10px);
   display: grid;
@@ -137,7 +150,6 @@
 
 .card_title {
   font-size: var(--font-size-main, 18px);
-
 }
 
 .card_text {
@@ -156,23 +168,6 @@
   font-size: var(--font-size-main, 18px);
   font-weight: normal;
 }
-
-.gallery {
-display: grid;
-gap: 10px;
-}
-
-.gallery-title {
-  font-size: var(--font-size-main, 18px);
-}
-
-.gallery__item {
-  margin: 0;
-  inline-size: 100%;
-  padding: 0;
-  
-}
-
 
 /*---------------------------------------------footer-----------------------------------*/
 
