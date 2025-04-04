@@ -1,8 +1,8 @@
 :root.theme-dark {
   --main-text-color: #f1b2ce;
   --accent-color: #ff0070;
-  --accent-color-opcaity: #ff007066;
-  --section-title-color: #ff0070;
+  --button-hov-color: #ff007066;
+  --dec_el_color: #ff0070;
   --headline-color: #DB00FF;
   --decor-text-color: #000028;
   --bg-img: url("../images/cover-image-dark.png") ;
