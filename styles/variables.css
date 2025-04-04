@@ -3,18 +3,16 @@
   и их переопределение под различные устройства
 */
 :root {
-
---font-size-main: 18px;
---font-size_header-footer: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
---main-text-color: #f1b2ce;
---accent-color: #ff0070;
---accent-color-opcaity: #ff007066;
---section-title-color: #ff0070;
---headline-color: #DB00FF;
---decor-text-color: #000028;
---bg-img: url("../images/cover-image-dark.png") ;
---bckg-color: #000028;
---page__row-gap: 40px;
---ofst: 10px;
+  --font-size-main: 18px;
+  --font-size_header-footer: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --main-text-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --accent-color-opcaity: #ff007066;
+  --section-title-color: #ff0070;
+  --headline-color: #db00ff;
+  --decor-text-color: #000028;
+  --bg-img: url("../images/cover-image-dark.png");
+  --bckg-color: #000028;
+  --page__row-gap: 40px;
+  --ofst: 10px;
 }
-
